@@ -1,0 +1,12 @@
+<div class="container tr" *ngFor="let travels of travels; index as travel">
+    <div class="col" style="width: 19rem;">
+        <a routerLink="/travels/{{travel}}"> <img src="{{travels.Image}}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+            <a routerLink="/travels/{{travel}}">
+                <h5 class="card-title ">{{travels.name}}</h5>
+            </a>
+            <p class="card-text">{{travels.duration}}</p>
+
+        </div>
+    </div>
+</div>

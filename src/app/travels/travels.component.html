@@ -1,0 +1,19 @@
+<div class="container tr" *ngIf="travels">
+    <div class="col" style="width: 19rem;">
+        <img src="{{travels.Image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+
+            <h5 class="card-title">{{travels.name}}</h5>
+            <p class="card-text">{{travels.description}}</p>
+            <p class="card-text">{{travels.Start}} </p>
+            <p class="card-text">{{travels.duration}}</p>
+            <p class="card-text">{{travels.price | currency: 'EUR'}}</p>
+            <input type="submit" class="btn btn-primary" value="addTocart" (click)="addTocart()">
+            <input type="submit" class="btn btn-danger" routerLink="/travels" value="Back to the travel page">
+
+
+
+
+        </div>
+    </div>
+</div>

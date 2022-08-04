@@ -1,0 +1,31 @@
+<br>
+<br>
+
+<div class="container car" *ngFor="let val of cart">
+
+    <h2 class="name">{{val.name}}</h2>
+
+    <p class="price">{{val.price | currency: 'EUR'}}</p>
+
+</div>
+
+
+<p class="sum">{{total | currency: 'EUR'}}</p>
+<br>
+<hr>
+<br>
+
+
+
+
+
+<div>
+
+    <form [formGroup]="info" (ngSubmit)="makeOrder()">
+        <input placeholder="name" type="text" formControlName="name">
+        <input placeholder="address" type="text" formControlName="address">
+        <input placeholder="Email" type="email" formControlName="Email">
+        <input type="submit" class="btn btn-success" value="Bay now">
+
+    </form>
+</div>
